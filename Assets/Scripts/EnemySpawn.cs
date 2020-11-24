@@ -6,8 +6,10 @@ using System.Linq;
 public class EnemySpawn : MonoBehaviour
 {
     [SerializeField] private GameObject _template;
+
     private List <Transform> _points;
     private WaitForSeconds _spawnPeriod = new WaitForSeconds(2f);
+
     private void Awake()
     {
         _points = gameObject.GetComponentsInChildren<Transform>().ToList();
